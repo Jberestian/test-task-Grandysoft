@@ -23,6 +23,8 @@ function getCursorPosition(e) {
 }
 
 function drawLine(e) {
+  // canvasEL.style.transition = "all 5s";
+
   context = this.getContext("2d");
 
   x = getCursorPosition(e)[0] - this.offsetLeft;
@@ -47,6 +49,7 @@ function drawLine(e) {
 function stopDraw() {
   button.addEventListener("click", function () {
     context.clearRect(0, 0, canvas.width, canvas.height);
+    // canvasEL.style.transition = "ease 10s";
   });
 }
 
